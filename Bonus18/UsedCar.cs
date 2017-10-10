@@ -28,6 +28,9 @@ namespace Bonus18
         //default constructor
         public UsedCar() //base constructor? 
         {
+            Make = "";
+            Model = "";
+            Year = 0;
             usedprice = 0;
             miles = 0;
         }
