@@ -59,7 +59,7 @@ namespace Bonus18
 
         public virtual void PrintInfo()
         {
-            Console.WriteLine(Make + " " + Model + " " + Year + " " +Price); //property (capitalized)
+            Console.WriteLine(Make.PadRight(8, ' ') + "\t" + Model.PadRight(8, ' ') + "\t" + Year.ToString().PadRight(8, ' ') + "\t" + "$" + Price.ToString("N2")); //property (capitalized)
 
             //to enable method override, we must go to the top, in our Person class. 
             //if the method is defined as virtual, you can override it

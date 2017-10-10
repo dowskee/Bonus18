@@ -26,7 +26,7 @@ namespace Bonus18
         }
 
         //consturctor with values
-        public UsedCar(string CarModel, string CarMake, int CarYear, double CarPrice, double CarMiles)
+        public UsedCar(string CarMake, string CarModel, int CarYear, double CarPrice, double CarMiles)
         {
             
             make = CarMake;
@@ -38,7 +38,7 @@ namespace Bonus18
 
         public override void PrintInfo()
         {
-            Console.WriteLine(Make + " " + Model + " " + Year + " " + Price+"(Used) " + Miles+" miles");
+            Console.WriteLine(Make.PadRight(8, ' ') + "\t" + Model.PadRight(8, ' ') + "\t" + Year.ToString().PadRight(8, ' ') + "\t" +"$"+Price.ToString("N2").PadRight(8, ' ') + "(Used) " + Miles+" miles");
         }
 
     }
