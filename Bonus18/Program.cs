@@ -46,7 +46,6 @@ namespace Bonus18
 
             int UserSelection = int.Parse(Console.ReadLine());
 
-
         }
     }
 }

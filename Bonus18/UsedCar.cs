@@ -9,14 +9,7 @@ namespace Bonus18
     class UsedCar:Car
     {
 
-        private double usedprice;
         private double miles;
-
-        public double UsedPrice
-        {
-            set { usedprice = value; }
-            get { return usedprice; }
-        }
 
         public double Miles
         {
@@ -28,26 +21,24 @@ namespace Bonus18
         //default constructor
         public UsedCar() //base constructor? 
         {
-            Make = "";
-            Model = "";
-            Year = 0;
-            usedprice = 0;
+            
             miles = 0;
         }
 
         //consturctor with values
-        public UsedCar(string make, string model, int year, double UsedCarPrice, double Miles)
+        public UsedCar(string CarModel, string CarMake, int CarYear, double CarPrice, double CarMiles)
         {
-            make = Make;
-            model = Model;
-            year = Year;
-            usedprice = UsedCarPrice;
-            miles = Miles;
+            
+            make = CarMake;
+            model = CarModel;
+            year = CarYear;
+            price = CarPrice;
+            miles = CarMiles;
         }
 
         public override void PrintInfo()
         {
-            Console.WriteLine(Make + " " + Model + " " + Year + " " + UsedPrice+" (Used)" + Miles+" miles");
+            Console.WriteLine(Make + " " + Model + " " + Year + " " + Price+"(Used) " + Miles+" miles");
         }
 
     }

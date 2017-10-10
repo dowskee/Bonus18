@@ -8,10 +8,10 @@ namespace Bonus18
 {
     class Car
     {
-        private string make;
-        private string model;
-        private int year;
-        private double price;
+        protected string make;
+        protected string model;
+        protected int year;
+        protected double price;
 
         public string Make //get set for each data piece
         {
@@ -59,7 +59,7 @@ namespace Bonus18
 
         public virtual void PrintInfo()
         {
-            Console.WriteLine(Make + " " + Model + " " + Year + " " + Price); //property (capitalized)
+            Console.WriteLine(Make + " " + Model + " " + Year + " " +Price); //property (capitalized)
 
             //to enable method override, we must go to the top, in our Person class. 
             //if the method is defined as virtual, you can override it
