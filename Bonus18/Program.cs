@@ -11,6 +11,9 @@ namespace Bonus18
         static void Main(string[] args)
         {
             //List of car models and types
+            Console.WriteLine("Welcome to the Grand Circus Car Lot! Here is your list of cars you may buy:");
+
+            Console.WriteLine("Make".PadRight(8, ' ') + "\t" + "Model".PadRight(8, ' ') + "\t" + "Year".PadRight(8, ' ') + "\t" + "Price".PadRight(8, ' ')+ "\t" + "Miles");
 
             Car c1 = new Car("1. Nikkolai", "Model S", 2017, 54999.90);
 
@@ -43,9 +46,24 @@ namespace Bonus18
             }
 
             Console.WriteLine("Which car would you like?");
+            string CarChoice = Console.ReadLine();
 
-            int UserSelection = int.Parse(Console.ReadLine());
+            if (CarChoice = InventoryList[i])
+            {
+                Console.WriteLine("Great choice! Someone from the finance department will be following up with you");
+                int indexToRemove = int.Parse(Console.ReadLine());
+                InventoryList = InventoryList.Where((source, index) => index != indexToRemove).ToArray();
+
+            }
+            //validate input is only 1-6
+
+
+            //to remove from list:
+            //int indexToRemove = int.Parse(Console.ReadLine());
+            //InventoryList = InventoryList.Where((source, index) => index != indexToRemove).ToArray(); (insert above)
+
 
         }
+
     }
 }
