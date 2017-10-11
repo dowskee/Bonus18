@@ -41,5 +41,9 @@ namespace Bonus18
             Console.WriteLine(Make.PadRight(8, ' ') + "\t" + Model.PadRight(8, ' ') + "\t" + Year.ToString().PadRight(8, ' ') + "\t" +"$"+Price.ToString("N2").PadRight(8, ' ') + "(Used) " + Miles+" miles");
         }
 
+        public override string ToString()
+        {
+            return (Make.PadRight(8, ' ') + "\t" + Model.PadRight(8, ' ') + "\t" + Year.ToString().PadRight(8, ' ') + "\t" + "$" + Price.ToString("N2").PadRight(8, ' ') + "(Used) " + Miles + " miles");
+        }
     }
 }

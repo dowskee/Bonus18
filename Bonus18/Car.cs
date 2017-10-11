@@ -66,5 +66,10 @@ namespace Bonus18
 
         }
 
+        public override string ToString()
+        {
+            return (Make.PadRight(8, ' ') + "\t" + Model.PadRight(8, ' ') + "\t" + Year.ToString().PadRight(8, ' ') + "\t" + "$" + Price.ToString("N2"));
+        }
+
     }
 }

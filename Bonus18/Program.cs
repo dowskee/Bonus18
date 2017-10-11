@@ -42,22 +42,25 @@ namespace Bonus18
 
             for (int i = 0; i < InventoryList.Length; i++)
             {
-                InventoryList[i].PrintInfo(); //print override info from UsedCar and Car
+                Console.WriteLine(InventoryList[i].ToString()); //print override info from UsedCar and Car
+                //you can even write this without ToString Method, because the compiler will automatically do this for the printing of the object.
             }
+            Console.WriteLine("7. Quit");
 
             Console.WriteLine("Which car would you like?");
-            string CarChoice = Console.ReadLine();
-
-            if (CarChoice = InventoryList[i])
+            int CarChoice = int.Parse(Console.ReadLine());
+            CarChoice = CarChoice - 1;
+            if (CarChoice == InventoryList.Length)
             {
-                Console.WriteLine("Great choice! Someone from the finance department will be following up with you");
-                int indexToRemove = int.Parse(Console.ReadLine());
-                InventoryList = InventoryList.Where((source, index) => index != indexToRemove).ToArray();
-
+                Console.WriteLine("Goodbye!");
             }
-            //validate input is only 1-6
 
-
+            else
+            {
+                //Console.WriteLine(InventoryList[CarChoice].Make);
+                //validate input is only 1-6
+                InventoryList[CarChoice].PrintInfo(); //can also be done with ToString
+            }
             //to remove from list:
             //int indexToRemove = int.Parse(Console.ReadLine());
             //InventoryList = InventoryList.Where((source, index) => index != indexToRemove).ToArray(); (insert above)
